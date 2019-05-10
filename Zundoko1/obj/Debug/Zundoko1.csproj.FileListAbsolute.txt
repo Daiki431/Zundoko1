@@ -1,0 +1,7 @@
+c:\users\b7187\source\repos\Zundoko1\Zundoko1\bin\Debug\Zundoko1.exe.config
+c:\users\b7187\source\repos\Zundoko1\Zundoko1\bin\Debug\Zundoko1.exe
+c:\users\b7187\source\repos\Zundoko1\Zundoko1\bin\Debug\Zundoko1.pdb
+c:\users\b7187\source\repos\Zundoko1\Zundoko1\obj\Debug\Zundoko1.csprojAssemblyReference.cache
+c:\users\b7187\source\repos\Zundoko1\Zundoko1\obj\Debug\Zundoko1.csproj.CoreCompileInputs.cache
+c:\users\b7187\source\repos\Zundoko1\Zundoko1\obj\Debug\Zundoko1.exe
+c:\users\b7187\source\repos\Zundoko1\Zundoko1\obj\Debug\Zundoko1.pdb
