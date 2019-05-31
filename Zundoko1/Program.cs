@@ -18,7 +18,7 @@ namespace Zundoko1
                         Console.Write("ズン");
                     else
                         Console.WriteLine("ドコ");
-                    if (n>=4&&j[n - 4] == 0 && j[n - 3] == 0 && j[n - 2] == 0 && j[n - 1] == 0 && j[n] == 1)
+                    if (n >= 4 && j[n - 4] == 0 && j[n - 3] == 0 && j[n - 2] == 0 && j[n - 1] == 0 && j[n] == 1)
                     {
                         if (n >= 5 && j[n - 5] == 1)
                             break;
