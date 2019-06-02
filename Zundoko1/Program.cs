@@ -7,6 +7,7 @@ namespace Zundoko1
         static void Main(string[] args)
         {
             Band band = new Band();
+            band.ZundokoBand();
             
         }
     }

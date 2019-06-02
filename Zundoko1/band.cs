@@ -8,21 +8,15 @@ namespace Zundoko1
 {
     class Band
     {
-        static int[] count=new int[100000];
-        public Band()
+        public int[] count = new int[100000];
+        public int f = 0;
+        public void ZundokoBand()
         {
-            int i = 0;
-            int f = 0;
             Singer zundokoSinger = new Singer();
             while (true)
             {
-                count[f] = zundokoSinger.Song();
-                if (count[f] == 0)
-                    Console.Write("ズン");
-                else if (count[f] == 1)
-                    Console.WriteLine("ドコ");
-                else
-                    Console.Write("・");
+                count[f] = zundokoSinger.ZundokoSinger();
+                
 
                 if (f >= 5 && count[f - 5] == 0 && count[f - 4] == 2 && count[f - 3] == 0 && count[f - 2] == 0 && count[f - 1] == 0 && count[f] == 1)
                 {
@@ -39,11 +33,22 @@ namespace Zundoko1
 
     class Singer
     {
-        Random r = new Random();
-
-        public int Song()
+        //「ズン」、「ドコ」、「・」をランダムで出力
+        public int ZundokoSinger()
         {
-            return r.Next(3);
+            Random r = new Random();
+            int rand = r.Next(3);
+            Band band = new Band();
+
+            band.count[band.f] = rand;
+
+            if (band.count[band.f] == 0)
+                Console.Write("ズン");
+            else if (band.count[band.f] == 1)
+                Console.WriteLine("ドコ");
+            else
+                Console.Write("・");
+            return rand;
         }
     }
 }
