@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Zundoko1
 {
     class Band
     {
+        //Singerに指示する
         public void ZundokoBand()
         {
             Singer zundokoSinger = new Singer();
-            int[] count = new int[1000000];
+            int[] count = new int[100000];
             int f = 0;
 
             while (true)
@@ -27,9 +29,8 @@ namespace Zundoko1
                         break;
                 }
                 f++;
-                System.Threading.Thread.Sleep(0);
+                Thread.Sleep(0);
             }
-            //Console.WriteLine(f);
             Listener listener = new Listener();
             listener.ZundokoListener();
         }
