@@ -9,29 +9,39 @@ namespace Zundoko1
 {
     class Band
     {
+        public int[] count = new int[10];
+        public int i = 0;
         //Singerに指示する
         public void ZundokoBand()
         {
-            Singer zundokoSinger = new Singer();
-            int[] count = new int[100000];
-            int f = 0;
+            Singer singer = new Singer();
+            Listener listener = new Listener();
+
 
             while (true)
             {
-                count[f] = zundokoSinger.ZundokoSinger();
-                
-
-                if (f >= 5 && count[f - 5] == 0 && count[f - 4] == 2 && count[f - 3] == 0 && count[f - 2] == 0 && count[f - 1] == 0 && count[f] == 1)
+                if (i > 9)
                 {
-                    if (f >= 6 && count[f - 6] == 1)
+                    count[0] = count[i - 5];
+                    count[1] = count[i - 4];
+                    count[2] = count[i - 3];
+                    count[3] = count[i - 2];
+                    count[4] = count[i - 1];
+                    i = 5;
+                }
+
+                count[i] = singer.Kiyoshi();
+
+                if (i >= 5 && count[i - 5] == 0 && count[i - 4] == 2 && count[i - 3] == 0 && count[i - 2] == 0 && count[i - 1] == 0 && count[i] == 1)
+                {
+                    if (i >= 6 && count[i - 6] == 1)
                         break;
-                    if (f == 5)
+                    if (i == 5)
                         break;
                 }
-                f++;
-                Thread.Sleep(0);
+                i++;
+                Thread.Sleep(1);
             }
-            Listener listener = new Listener();
             listener.ZundokoListener();
         }
         

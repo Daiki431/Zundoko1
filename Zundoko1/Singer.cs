@@ -10,7 +10,7 @@ namespace Zundoko1
     {
         Random r = new Random();
         //「ズン」、「ドコ」、「・」をランダムで出力
-        public int ZundokoSinger()
+        public int Kiyoshi()
         {
             int rand = r.Next(3);
 
