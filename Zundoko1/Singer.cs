@@ -10,19 +10,15 @@ namespace Zundoko1
     {
         Random r = new Random();
         //「ズン」、「ドコ」、「・」をランダムで出力
-        public int Kiyoshi()
+        public void Kiyoshi(int rhythm)
         {
-            int rand = r.Next(3);
 
-            if (rand == 0)
+            if (rhythm == 0)
                 Console.Write("ズン");
-            else if (rand == 1)
-                Console.WriteLine("ドコ");
+            else if (rhythm == 1)
+                Console.WriteLine("・");
             else
-                Console.Write("・");
-
-
-            return rand;
+                Console.Write("ドコ");
         }
     }
 }

@@ -10,9 +10,7 @@ namespace Zundoko1
     {
         public void ZundokoListener()
         {
-
             Console.WriteLine("キヨシ！");
-            
         }
     }
 }
