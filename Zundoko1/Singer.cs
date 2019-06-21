@@ -16,9 +16,9 @@ namespace Zundoko1
             if (rhythm == 0)
                 Console.Write("ズン");
             else if (rhythm == 1)
-                Console.WriteLine("・");
+                Console.Write("・");
             else
-                Console.Write("ドコ");
+                Console.WriteLine("ドコ");
         }
     }
 }

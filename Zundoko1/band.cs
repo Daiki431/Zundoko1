@@ -15,8 +15,10 @@ namespace Zundoko1
             Singer singer = new Singer();
             Listener listener = new Listener();
             Random rand = new Random();
+
             int rhythm = 0;
             int count = 0;
+            int tail = 1;
 
             while (true)
             {
@@ -25,21 +27,34 @@ namespace Zundoko1
                 switch (rhythm)
                 {
                     case 0://zun
-                        if(count==0 || count>1)
-                        count++;
+                        if (count < 5 && tail == 1 && (count == 0 || count >= 2))
+                            count++;
+                        else
+                        {
+                            count = 0;
+                            tail = 0;
+                        }
                         break;
                     case 1://・
                         if (count == 1)
                             count++;
                         else
+                        {
                             count = 0;
+                            tail = 0;
+                        }
                         break;
                     case 2://doko
-                        if (count != 5)
+                        if (count == 5)
+                            count++;
+                        else
+                        {
                             count = 0;
+                            tail = 1;
+                        }
                         break;
                 }
-                if (count == 5)
+                if (count == 6)
                 {
                     listener.ZundokoListener();
                     break;
