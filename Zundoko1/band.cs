@@ -24,13 +24,11 @@ namespace Zundoko1
             {
                 rhythm = rand.Next(3);
                 singer.Kiyoshi(rhythm);
-                switch (rhythm)
-                {
+                switch (rhythm){
                     case 0://zun
                         if (count < 5 && tail == 1 && (count == 0 || count >= 2))
                             count++;
-                        else
-                        {
+                        else{
                             count = 0;
                             tail = 0;
                         }
@@ -38,8 +36,7 @@ namespace Zundoko1
                     case 1://・
                         if (count == 1)
                             count++;
-                        else
-                        {
+                        else{
                             count = 0;
                             tail = 0;
                         }
@@ -47,15 +44,13 @@ namespace Zundoko1
                     case 2://doko
                         if (count == 5)
                             count++;
-                        else
-                        {
+                        else{
                             count = 0;
                             tail = 1;
                         }
                         break;
                 }
-                if (count == 6)
-                {
+                if (count == 6){
                     listener.ZundokoListener();
                     break;
                 }
