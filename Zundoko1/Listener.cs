@@ -8,9 +8,10 @@ namespace Zundoko1
 {
     class Listener
     {
-        public void ZundokoListener()
+        public void ZundokoListener(int count)
         {
-            Console.WriteLine("キヨシ！");
+            if (count == 6)
+                Console.WriteLine("キヨシ！");
         }
     }
 }

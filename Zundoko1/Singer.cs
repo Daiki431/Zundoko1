@@ -12,13 +12,15 @@ namespace Zundoko1
         //「ズン」、「ドコ」、「・」をランダムで出力
         public void Kiyoshi(int rhythm)
         {
-
+            string voice;
             if (rhythm == 0)
-                Console.Write("ズン");
+                voice = "ズン";
             else if (rhythm == 1)
-                Console.Write("・");
+                voice = "・";
             else
-                Console.WriteLine("ドコ");
+                voice = "ドコ\n";
+
+            Console.Write(voice);
         }
     }
 }
